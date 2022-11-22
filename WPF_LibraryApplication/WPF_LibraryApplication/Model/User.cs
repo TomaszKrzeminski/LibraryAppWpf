@@ -52,10 +52,13 @@ namespace WPF_LibraryApplication.Model
             BookReviews = new List<Review>();            
             BorrowedStart = null;
             BorrowedEnd = null;
+            Edition = DateTime.Now;
         }
 
         public int? BookID { get; set; }
         public string? BookTitle { get; set; }
+
+        public DateTime Edition { get; set; }
         public int Pages { get; set; }
         public bool Borrowed 
         {

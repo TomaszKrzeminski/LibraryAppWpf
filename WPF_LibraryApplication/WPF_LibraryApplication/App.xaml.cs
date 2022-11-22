@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using WPF_LibraryApplication.Model;
+using WPF_LibraryApplication.Stores;
+using WPF_LibraryApplication.ViewModel;
 
 namespace WPF_LibraryApplication
 {
@@ -16,10 +18,10 @@ namespace WPF_LibraryApplication
     /// </summary>
     public partial class App : Application
     {
-        //private readonly ServiceProvider _serviceProvider;
+        private readonly NavigationStore navigationStore;
         public App()
         {
-            
+            navigationStore= new NavigationStore();
         }
 
        
@@ -28,6 +30,14 @@ namespace WPF_LibraryApplication
         {            
             SeedData seed = new SeedData();
             seed.Seed();
+
+            navigationStore.CurrentView = new LibraryMainViewModel(navigationStore);
+
+            MainWindow = new MainWindow()
+            {
+                DataContext = new MainViewModel(navigationStore)
+            };
+            MainWindow.Show();
             base.OnStartup(e);
            
         }

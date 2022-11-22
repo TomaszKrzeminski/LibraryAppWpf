@@ -7,7 +7,33 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="View\AddBookView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AddUserView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\BookOptionsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\DisplayBooks.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddBookView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddUserView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\BookOptionsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\DisplayBooks.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

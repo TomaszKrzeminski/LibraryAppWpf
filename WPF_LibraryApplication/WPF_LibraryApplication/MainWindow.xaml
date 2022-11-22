@@ -4,9 +4,24 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_LibraryApplication"
+        xmlns:views="clr-namespace:WPF_LibraryApplication.View"
+        xmlns:viewModels="clr-namespace:WPF_LibraryApplication.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="900" Width="800">
+    
+    <Grid Margin="20 20" MaxHeight="600">
+        <Grid.Resources>
+            <DataTemplate DataType="{x:Type viewModels:LibraryMainViewModel }" >
+                <views:DisplayBooks/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:AddBookViewModel }" >
+                <views:AddBookView/>
+            </DataTemplate>
+           
+        </Grid.Resources>
+        <ContentControl Content="{Binding Path=currentViewModel}">
+            
+        </ContentControl>
 
     </Grid>
 </Window>

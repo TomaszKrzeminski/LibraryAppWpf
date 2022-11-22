@@ -5,7 +5,7 @@ namespace WPF_LibraryApplication.Widok
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected void OnPropertyChanged(params string[] nazwy)
+        public void OnPropertyChanged(params string[] nazwy)
         {
 
             if(PropertyChanged!=null)

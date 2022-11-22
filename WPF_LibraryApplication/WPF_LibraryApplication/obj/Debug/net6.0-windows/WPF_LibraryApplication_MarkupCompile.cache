@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\tomas\OneDrive\Pulpit\LibraryAppWpf\WPF_LibraryApplication\WPF_LibraryApplication\App.xaml
-11407045341
+51377742021
 
-10457802747
+241443777612
 2141550369554
-MainWindow.xaml;
+MainWindow.xaml;View\AddBookView.xaml;View\AddUserView.xaml;View\BookOptionsView.xaml;View\DisplayBooks.xaml;
 
 False
 
